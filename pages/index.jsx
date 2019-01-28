@@ -15,7 +15,7 @@ const Index = ({ initialItems }) => {
 
   const filterItems = ({ needle }) => {
     const filtered = items.filter(({ title }) => title.includes(needle));
-    setFiltered(filtered);
+    setFiltered(needle.length ? filtered : false);
     setFound(needle.length ? filtered.length : false);
   };
 
